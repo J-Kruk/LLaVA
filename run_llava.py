@@ -65,7 +65,7 @@ def eval_model(args):
         args.model_path,
         args.model_base,
         model_name,
-        cache_dir="/nethome/jkruk3/how_fake/llava_cache_dir",
+        cache_dir=args.cache_dir,
     )
 
     qs = args.query
@@ -147,7 +147,7 @@ def load_model(args):
         args.model_path,
         args.model_base,
         model_name,
-        cache_dir="/nethome/jkruk3/how_fake/llava_cache_dir",
+        cache_dir=args.cache_dir,
     )
     return tokenizer, model, image_processor, context_len
 
